@@ -149,3 +149,5 @@ BEGIN
 	PRINT '==========================================================='
 	END CATCH
 END
+
+exec bronze.load_bronze
