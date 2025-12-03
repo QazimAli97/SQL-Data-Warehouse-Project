@@ -68,7 +68,7 @@ select *,
 ROW_NUMBER() over (partition by cst_id order by cst_create_date desc )[flag_last]
 from [bronze].[crm_cust_info]
 where cst_id is not null 
-)t where flag_last  = 1 
+)t where flag_last  = 1  --Remove duplicates
 
 SET @end_time = GETDATE();
 PRINT '>> Load Duration:' + CAST(DATEDIFF(second, @start_time, @end_time) AS NVARCHAR) + 'seconds';
