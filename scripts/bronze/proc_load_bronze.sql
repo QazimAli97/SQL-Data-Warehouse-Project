@@ -7,6 +7,8 @@ Script Purpose:
     It performs the following actions:
     - Truncates the bronze tables before loading data.
     - Uses the `BULK INSERT` command to load data from csv Files to bronze tables.
+	- Prints the laod duration for each table
+	- If anything goes wrong - like a missing csv files then print the exact error message and error number.
 
 Parameters:
     None. 
